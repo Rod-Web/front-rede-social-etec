@@ -1,0 +1,10 @@
+capturaDados.js      
+    event.preventDefault();
+    event.target.reset(); 
+    == limpa os valores do input
+
+
+dadosLogin.js
+    if (response.ok && data.sucesso)
+    == requisição funcionou
+    == "resultado" voltou true

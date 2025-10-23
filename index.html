@@ -1,0 +1,73 @@
+<!-- index.html -->
+<!doctype html>
+<html lang="pt-BR">
+    
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="./styles/login/login.css">
+    <link rel="stylesheet" href="./styles/login/button_login.css">
+    <link rel="stylesheet" href="./styles/login/formulario.css">
+
+    <title>Login - NOME DO SITE</title>
+</head>
+
+<body>
+
+    <div class="wrap">
+        
+        <div class="esquerda">
+            
+            <div class="logo"> 
+                <span class="icon"></span> 
+                <span>nome do site.</span>
+            </div>
+
+            <h1>Faça login na sua conta</h1>
+            <p class="descricao">Bem-vindo! Selecione o que você é para se cadastrar:</p>
+
+            <form class="formulario" id="form-login" onsubmit="return false;">
+        
+                <div class="select-wrapper">
+
+                    <select id="tipo-usuario" class="select" aria-label="Tipo de usuário">
+                        <option value="aluno">Aluno</option>
+                        <option value="professor">Professor</option>
+                    </select>
+
+                </div>
+
+                <div class="inputs">
+                       
+                    <label class="campo" for="text-identificador" id="text-identificador">RM:</label>
+                    <input id="identificador" type="text" placeholder="Digite seu login" name="text-identificador">
+
+
+                    <label class="campo">Senha:</label>
+                    <input id="senha" type="current-password" placeholder="Digite sua senha">
+
+                    
+                </div>
+
+
+
+                <a class="ajuda" href="linkaqui"> Solicitar nova senha </a>
+                    <p style="color: red; font-size: 0.8em;" id="resposta"></p>
+                <button type="submit" class="btn-login">Entrar</button>
+
+            </form>
+        </div>
+
+
+        <img class="ilustracao" src="./assets/images/ilustracao.jpg" alt="ilustração"/>
+
+    </div>
+
+
+    <script type="module" src="./scripts/login/main.js"></script>
+
+</body>
+</html>

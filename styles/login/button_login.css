@@ -1,0 +1,27 @@
+.btn-login {
+    background: var(--azul-600);
+    color: #fff;
+    border: none;
+    border-radius: var(--card-borda);
+    padding: 16px 0;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.1s ease;
+    width: 100%;
+    max-width: 520px;
+    margin-top: 10px;
+}
+
+.btn-login:hover {
+    background: var(--azul-500);
+}
+
+.btn-login:active {
+    transform: scale(0.98);
+}
+
+.btn-login:focus {
+    outline: 2px solid rgba(11, 98, 224, 0.25);
+    outline-offset: 2px;
+}
