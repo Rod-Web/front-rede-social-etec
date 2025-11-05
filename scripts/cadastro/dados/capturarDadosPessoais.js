@@ -9,5 +9,5 @@ export function capturarDadosAluno() {
     if(input.id == "valorContato") dadosAluno["tipoContato"] = input.type;
     });
 
-    console.log(dadosAluno);
+    console.log("Informações dos alunos coletadas");
 }

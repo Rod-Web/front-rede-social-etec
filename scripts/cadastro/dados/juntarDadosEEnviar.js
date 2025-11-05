@@ -6,26 +6,32 @@ export async function juntarDadosEEnviar() {
         ...dadosTurma
     }; 
 
-    try {
-        const resposta = await fetch('http://localhost:3001/alunos', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(dadosCompletos)
-        });
-        if (!resposta.ok) {
-            throw new Error('Erro ao enviar os dados para o servidor');
-        }
+  try {
+    const resposta = await fetch("http://localhost:3001/alunos/inserirAluno", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(dadosCompletos),
+    });
 
-            console.log("Dados completos do aluno:", dadosCompletos);
-            location.href = "../../../index.html";
-        
-    } catch (error) {
-        console.error("Erro ao enviar os dados:", error);
-        location.reload();
-        throw error;
+    console.log("Dados enviados com sucesso!");
+
+
+    const data = await resposta.json();
+
+    if (!resposta.ok) {
+      alert("Erro: " + data.erro); 
+      return;
     }
 
+    alert("Aluno cadastrado com sucesso!");
+    console.log("Dados tratados:", data.dados);
 
+
+    if (data.sucesso) {
+      location.href = "/Front-end-rede-social-etec/index.html";
+    }
+
+  } catch (erro) {
+    alert("Erro de conexão com o servidor: " + erro.message);
+  }
 }

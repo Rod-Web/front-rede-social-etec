@@ -10,7 +10,6 @@ export function ultimaEtapaFormulario() {
             capturarDadosDaTurma()
             try {
                 await juntarDadosEEnviar();
-                console.log("Dados enviados com sucesso!");
             } catch (error) {
                 console.error("Erro ao enviar os dados:", error);
             }
