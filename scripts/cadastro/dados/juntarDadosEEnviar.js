@@ -28,7 +28,7 @@ export async function juntarDadosEEnviar() {
 
 
     if (data.sucesso) {
-      location.href = "/Front-end-rede-social-etec/index.html";
+      location.href = "/index.html";
     }
 
   } catch (erro) {
