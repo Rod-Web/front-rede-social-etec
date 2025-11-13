@@ -3,10 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="../scripts/token/validar.js" defer></script>
     <title>Document</title>
 </head>
-<body>
+<body style="display: none;">
     <h1>Dashbord</h1>
 
+    <script type="module"> 
+        import {infoUser} from "../scripts/token/validar.js"
+        const nome = infoUser.usuario.nome.split(" ")[0]
+        document.querySelector("h1").textContent = `You're Welcome ${nome}`;
+
+    </script>
 </body>
 </html>
