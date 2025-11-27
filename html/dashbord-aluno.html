@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>connectaETEC - início</title>
+    <link rel="stylesheet" href="../styles/dashboard/dashboard.css">
+    <link rel="icon" href="../assets/images/icon2.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=MuseoModerno:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <script type="module" src="../scripts/token/validar.js" defer></script>
+
+</head>
+<body>
+    <div class="container">
+
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="../a/images/icon2.png" alt="logo">
+                <h2>connectaetec</h2>
+            </div>
+
+            <nav>
+                <a href="#" class="active"><i class="icon">🏠</i> Início</a>
+                <a href="#"><i class="icon">📁</i> Material de aula</a>
+            </nav>
+
+            <div class="ajuda">
+                <div class="ajuda-box">
+                    <img src="../assets/images/SAC.png" alt="" class="SAC">
+                    <p><strong>Precisa de ajuda?</strong><br>
+                    Você está tendo problemas utilizando o connectaETEC?</p>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main">
+            <header class="topbar">
+                <div class="search-box">
+                    <input type="text" placeholder="Buscar...">
+                </div>
+                <p>data de acesso: <span id="date"></span></p>
+            </header>
+
+            <section class="banner">
+                <div class="banner-text">
+                    <h2>Bem-vindo, <span>ALUNO!</span></h2>
+                    <p>Nova atualização de material de aula disponível. 
+                    <a href="#">Clique aqui.</a><br>
+                </div>
+                <img src="../assets/images/mundoImg.png" alt="desenho" class="banner-img">
+            </section>
+
+            <section class="aulas" id="aulasContainer">
+                <h3>AULAS & EXERCÍCIOS</h3>
+            </section>
+        </main>
+
+        
+        <aside class="perfil">
+            <div class="perfil-img"></div>
+            <h4>NOME DO ALUNO</h4>
+            <p>ESTUDANTE</p>
+
+            <button class="btn-grad">perfil</button>
+        </aside>
+    </div>
+
+    <script type="module">
+        import {infoUser} from "../scripts/token/validar.js"
+        const nome = infoUser.usuario.nome.split(" ")[0];
+        document.querySelector(".banner-text h2 span").textContent = `${nome}`;
+        document.querySelector(".perfil h4").textContent = `${nome}`;
+
+    </script>
+    <script type="module" src="../scripts/dashboard/dashboard.js"></script>
+
+</body>
+</html>
+

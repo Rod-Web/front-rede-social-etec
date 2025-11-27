@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+body {
+    background-color: #e6e6e6;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 230px 1fr 250px;
+    height: 100vh;
+}
+
+.sidebar {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 25px;
+    border-right: 1px solid #ccc;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 35px;
+    height: 35px;
+}
+
+.logo h2 {
+    font-family: "MuseoModerno", sans-serif;
+    color: #0e67e6;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 40px;
+}
+
+.sidebar nav a {
+    text-decoration: none;
+    color: #555;
+    padding: 10px 15px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+}
+
+.sidebar nav a.active {
+    background: #ece9ff;
+    color: #8c3fe2;
+    font-weight: 600;
+}
+
+.ajuda {
+    margin-top: auto;
+}
+
+.ajuda-box {
+    background: linear-gradient(135deg, #e0e2ff, #f4e0ff);
+    border-radius: 15px;
+    padding: 15px;
+    font-size: 13px;
+    color: #333;
+}
+
+.SAC {
+    width: 100px;
+    padding-left: 30px;
+    padding-bottom: 20px;
+}
+
+.main {
+    background: #d9d9d9;
+    padding: 25px 40px;
+    overflow-y: auto;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-box input {
+    width: 250px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    font-size: 14px;
+}
+
+#date {
+    color: #555;
+    font-size: 13px;
+}
+
+.banner {
+    background: #fff;
+    border-radius: 25px;
+    margin-top: 25px;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.banner h2 {
+    font-family: "MuseoModerno", sans-serif;
+    font-weight: 700;
+    color: #ff36b1;
+}
+
+.banner span {
+    font-weight: 800;
+}
+
+.banner p {
+    margin-top: 10px;
+    color: #555;
+    font-size: 14px;
+}
+
+.banner a {
+    color: #6c0fff;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.banner-img {
+    width: 200px;
+}
+
+.aulas {
+    margin-top: 40px;
+}
+
+.aulas h3 {
+    color: #555;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.card {
+    background: linear-gradient(90deg,#ff36b1,#6c0fff);
+    border-radius: 10px;
+    padding: 20px;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.card h4 {
+    font-family: "MuseoModerno", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.card p {
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+.perfil {
+    background: #fff;
+    text-align: center;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-left: 1px solid #ccc;
+}
+
+.perfil-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 6px solid #555;
+    background: #ccc;
+    margin-bottom: 15px;
+}
+
+.perfil h4 {
+    font-family: "MuseoModerno", sans-serif;
+    font-weight: 700;
+    color: #333;
+}
+
+.perfil p {
+    color: #888;
+    margin-bottom: 20px;
+}
+
+.btn-grad {
+    font-family: "MuseoModerno", sans-serif;
+    background: linear-gradient(90deg, #ff36b1,#6c0fff);
+    border: none;
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 25px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 5px 0;
+    transition: 0.3s;
+}

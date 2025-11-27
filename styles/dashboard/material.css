@@ -1,0 +1,266 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    background: #dcdcdc;
+}
+
+.sidebar {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 25px;
+    border-right: 1px solid #ccc;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 40px;
+}
+
+.sidebar nav a {
+    text-decoration: none;
+    color: #555;
+    padding: 10px 15px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+}
+
+.sidebar nav a.active {
+    background: #ece9ff;
+    color: #8c3fe2;
+    font-weight: 600;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #2a2a2a;
+}
+
+.logo img {
+    width: 35px;
+    height: 35px;
+}
+
+h2 {
+    font-size: 18px;
+    font-family: "MuseoModerno", sans-serif;
+    color: #0e67e6;
+    font-weight: 700;
+}
+
+h1 {
+    font-family: "MuseoModerno", sans-serif;
+    font-weight: 700;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #333;
+    padding: 0.9rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.menu a:hover {
+    background: #f2f2f2;
+}
+
+.menu a.active {
+    background: #f1f0ff;
+    color:  #6189f8;
+    font-weight: 600;
+}
+
+
+.ajuda {
+    margin-top: auto;
+}
+
+.ajuda-box {
+    background: linear-gradient(135deg, #e0e2ff, #f4e0ff);
+    border-radius: 15px;
+    padding: 15px;
+    font-size: 13px;
+    color: #333;
+}
+
+.SAC {
+    width: 100px;
+    padding-left: 30px;
+    padding-bottom: 20px;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+}
+
+.search-box input {
+    width: 250px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    font-size: 14px;
+}
+
+.menu-icon {
+    font-size: 1.3rem;
+}
+
+.materia-banner {
+    background: linear-gradient(90deg,#ff36b1,#6c0fff);
+    color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    margin: 2rem;
+}
+
+.materia-banner h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.materia-banner p {
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+.materia-card {
+    background: #fff;
+    border-radius: 10px;
+    margin: 0 2rem 3rem 2rem;
+    padding: 2rem;
+    width: 100rem;
+}
+
+.materia-card p {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+.materia-card h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.postagem {
+    color: #777;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+.descricao {
+    color: #333;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+
+.materia-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.6rem;
+}
+
+.material-apoio {
+    display: flex;
+    gap: 10px;
+}
+
+.material-apoio a {
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: var(--radius);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+a.attached {
+    background: #efefef;
+    text-decoration: none;
+    color: #ff36b1;
+}
+
+a.download {
+    background: #faf5ff;
+    color:  #a07bf3;
+    text-decoration: none;
+}
+
+@media (max-width: 900px) {
+    .sidebar {
+        position: fixed;
+        width: 70px;
+        align-items: center;
+        padding: 1rem 0;
+    }
+
+    .logo span, .menu a span, .help-box {
+        display: none;
+    }
+
+    .menu a {
+        justify-content: center;
+    }
+
+    .main {
+        margin-left: 70px;
+        width: calc(100% - 70px);
+    }
+
+    .materia-banner {
+        margin: 1rem;
+    }
+
+    .materia-card {
+        margin: 1rem;
+    }
+
+    .search-box {
+        width: 150px;
+    }
+}
+
+@media (max-width: 600px) {
+    .topbar {
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .search-box {
+        width: 100%;
+    }
+
+    .date {
+        order: 3;
+    }
+}

@@ -32,8 +32,14 @@ export async function tratamentoDados(tipoUsuario, identificador, senha) {
       respHtml.style.color = "green"
       respHtml.textContent = "✅ Login bem-sucedido!"
       console.log("Usuário:", data.usuario);
+
+      const size = data.usuario.identificador.length;
       
-      window.location.href = "./../../../html/dashbord.html";
+      if (size == 7)
+        window.location.href = "/html/dashbord-professor.html";
+      else  if (size == 6)
+        window.location.href = "/html/dashbord-aluno.html";
+
       
     } else {
 
